@@ -304,6 +304,25 @@ li a:active {
     transform: translateY(4px);
 }
 
+/* Footer */
+footer {
+    background-color: #1a3d0a;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.copyright p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+section {
+    scroll-margin-top: 60px;
+    /* match your navbar height */
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     header h1 {
