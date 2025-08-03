@@ -22,6 +22,11 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: all 0.3s ease;
+}
+
+header.collapsed {
+    padding: 0.5rem 0;
 }
 
 header h1 {
@@ -29,6 +34,17 @@ header h1 {
     margin-bottom: 1rem;
     font-size: 1.8rem;
     font-weight: bold;
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+header.collapsed h1 {
+    opacity: 0;
+    transform: translateY(-20px);
+    margin-bottom: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 /* Navigation */
@@ -108,19 +124,39 @@ section {
 }
 
 .day-2 {
-    background-color: #d4f0d4;
+    background-image: #e8f5e8;
+}
+
+.day-2 .section-header {
+    background-image: url('../img/loch-ness.jpg');
+    background-position: center center;
 }
 
 .day-3 {
-    background-color: #c0ebc0;
+    background-color: #e8f5e8;
+}
+
+.day-3 .section-header {
+    background-image: url('../img/cows.jpg');
+    background-position: center center;
 }
 
 .day-4 {
-    background-color: #ace6ac;
+    background-color: #e8f5e8;
+}
+
+.day-4 .section-header {
+    background-image: url('../img/skye.jpg');
+    background-position: center center;
 }
 
 .day-5 {
-    background-color: #98e198;
+    background-color: #e8f5e8;
+}
+
+.day-5 .section-header {
+    background-image: url('../img/fly.jpg');
+    background-position: center center;
 }
 
 /* Content within sections */
@@ -135,6 +171,13 @@ section h3 {
     font-weight: bold;
 }
 
+section h4 {
+    color: #1a3d0a;
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 section p {
     margin-bottom: 0.5rem;
     color: #333;
@@ -143,14 +186,14 @@ section p {
 /* Itinerary bullets - target paragraphs in divs that contain "Itinerary" h3 */
 .itinerary-item {
     position: relative;
-    padding-left: 1.2rem;
+    padding-left: 1.5rem;
 }
 
 .itinerary-item::before {
     content: "•";
     position: absolute;
-    left: 0;
-    color: #2d5016;
+    left: 0.5rem;
+    color: #1a3d0a;
     font-weight: bold;
 }
 
@@ -163,12 +206,20 @@ section a:hover {
     text-decoration: underline;
 }
 
-/* Directions button */
+/* Directions button container */
+.directions-container {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Directions buttons */
 .directions-btn {
     display: inline-block;
     background-color: #5a8a3a;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border: none;
     border-radius: 10px;
     text-decoration: none;
@@ -177,6 +228,8 @@ section a:hover {
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 500;
+    flex: 1;
+    text-align: center;
 }
 
 .directions-btn:hover {
