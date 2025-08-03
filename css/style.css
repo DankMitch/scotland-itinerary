@@ -77,7 +77,8 @@ main {
 /* Sections */
 section {
     width: 100%;
-    margin-bottom: 0;
+    padding: 1.5rem 0;
+    margin-bottom: 0rem;
 }
 
 /* Section Headers with Background Images */
@@ -106,7 +107,7 @@ section {
 
 .section-header h2 {
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: normal;
     z-index: 1;
     position: relative;
@@ -140,6 +141,7 @@ section {
 /* Day-specific colors and backgrounds */
 .day-1 {
     background-color: #e8f5e8;
+    padding-top: 0;
 }
 
 .day-1 .section-header {
@@ -184,13 +186,14 @@ section {
 
 /* Content within sections */
 section>div:not(.section-header) {
-    padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+    padding: 0rem 1rem;
     /* Added extra bottom padding */
 }
 
 section h3 {
     color: #1a3d0a;
     margin-bottom: 1rem;
+    padding-top: 2rem;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -301,39 +304,4 @@ li a:hover {
 li a:active {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
     transform: translateY(4px);
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    body {
-        padding-bottom: 80px;
-        /* Extra space for mobile nav */
-    }
-
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    .bottom-nav {
-        padding: 1rem 0.5rem;
-        position: fixed !important;
-        /* Force fixed positioning on mobile */
-        bottom: 0 !important;
-        z-index: 9999 !important;
-    }
-
-    .bottom-nav a {
-        padding: 0.6rem 0.8rem;
-        font-size: 0.9rem;
-        min-width: 45px;
-    }
-
-    .section-header h2 {
-        font-size: 1.5rem;
-    }
-
-    section>div:not(.section-header) {
-        padding: 1rem 1rem 4rem 1rem;
-        /* Added extra bottom padding for mobile */
-    }
 }
