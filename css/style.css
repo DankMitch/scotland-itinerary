@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2d5016;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content */
+main {
+    width: 100%;
+}
+
+/* Sections */
+section {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Section Headers with Background Images */
+.section-header {
+    height: 150px;
+    width: 100%;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.section-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.section-header h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: normal;
+    z-index: 1;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Day-specific colors and backgrounds */
+.day-1 {
+    background-color: #e8f5e8;
+}
+
+.day-1 .section-header {
+    background-image: url('../img/edinburgh.jpg');
+}
+
+.day-2 {
+    background-color: #d4f0d4;
+}
+
+.day-3 {
+    background-color: #c0ebc0;
+}
+
+.day-4 {
+    background-color: #ace6ac;
+}
+
+.day-5 {
+    background-color: #98e198;
+}
+
+/* Content within sections */
+section>div:not(.section-header) {
+    padding: 1.5rem;
+}
+
+section h3 {
+    color: #2d5016;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+section p {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Itinerary bullets - target paragraphs in divs that contain "Itinerary" h3 */
+.itinerary-item {
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.itinerary-item::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2d5016;
+    font-weight: bold;
+}
+
+section a {
+    color: #2d5016;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+/* Button-style list items */
+li a {
+    display: inline-block;
+    background-color: #5a8a3a;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+li a:hover {
+    background-color: #7ba05b;
+    color: #2d5016;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    transform: translateY(3px);
+}
+
+li a:active {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    transform: translateY(4px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+
+    nav a {
+        flex: 1;
+        text-align: center;
+        min-width: calc(20% - 0.4rem);
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    section>div:not(.section-header) {
+        padding: 1rem;
+    }
+}
