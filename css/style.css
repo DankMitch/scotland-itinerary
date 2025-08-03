@@ -103,7 +103,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.60);
 }
 
 .section-header h2 {
@@ -113,6 +113,11 @@ section {
     z-index: 1;
     position: relative;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.section-header h2 .location {
+    font-size: 0.8em;
+    font-weight: 300;
 }
 
 /* Day-specific colors and backgrounds */
