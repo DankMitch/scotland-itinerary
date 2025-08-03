@@ -12,60 +12,52 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     line-height: 1.6;
+    padding-bottom: 80px;
+    /* Space for bottom navigation */
 }
 
-/* Header */
+/* Header - simplified, no sticky */
 header {
     background-color: #1a3d0a;
     color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: all 0.3s ease;
-}
-
-header.collapsed {
-    padding: 0.5rem 0;
+    padding: 2rem 0;
+    text-align: center;
 }
 
 header h1 {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
-    transition: all 0.3s ease;
-    opacity: 1;
-    transform: translateY(0);
+    margin: 0;
 }
 
-header.collapsed h1 {
-    opacity: 0;
-    transform: translateY(-20px);
-    margin-bottom: 0;
-    height: 0;
-    overflow: hidden;
-}
-
-/* Navigation */
-nav {
+/* Bottom Navigation - App style */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1a3d0a;
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    padding: 1rem 0;
+    z-index: 100;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-nav a {
+.bottom-nav a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 1rem;
     transition: all 0.3s ease;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 25px;
     font-weight: 500;
     border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    min-width: 50px;
 }
 
-nav a:hover {
+.bottom-nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -304,41 +296,20 @@ li a:active {
     transform: translateY(4px);
 }
 
-/* Footer */
-footer {
-    background-color: #1a3d0a;
-    color: white;
-    padding: 1.5rem 0;
-    text-align: center;
-}
-
-.copyright p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-section {
-    scroll-margin-top: 60px;
-    /* match your navbar height */
-}
-
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5rem;
     }
 
-    nav {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        padding: 0 1rem;
+    .bottom-nav {
+        padding: 0.75rem 0;
     }
 
-    nav a {
-        flex: 1;
-        text-align: center;
-        min-width: calc(20% - 0.4rem);
+    .bottom-nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+        min-width: 45px;
     }
 
     .section-header h2 {
