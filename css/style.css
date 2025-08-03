@@ -16,16 +16,12 @@ body {
 
 /* Header */
 header {
-    background-image: url('../img/scottish-flag.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: black;
+    background-color: #1a3d0a;
+    color: white;
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    position: relative;
 }
 
 header h1 {
@@ -33,9 +29,6 @@ header h1 {
     margin-bottom: 1rem;
     font-size: 1.8rem;
     font-weight: bold;
-    position: relative;
-    z-index: 1;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 /* Navigation */
@@ -46,17 +39,20 @@ nav {
 }
 
 nav a {
-    color: black;
+    color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease;
-    position: relative;
-    z-index: 1;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 0.75rem;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    font-weight: 500;
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Main Content */
@@ -90,7 +86,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.65);
 }
 
 .section-header h2 {
@@ -133,7 +129,7 @@ section>div:not(.section-header) {
 }
 
 section h3 {
-    color: #2d5016;
+    color: #1a3d0a;
     margin-bottom: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
@@ -165,6 +161,34 @@ section a {
 
 section a:hover {
     text-decoration: underline;
+}
+
+/* Directions button */
+.directions-btn {
+    display: inline-block;
+    background-color: #5a8a3a;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.directions-btn:hover {
+    background-color: #7ba05b;
+    color: #2d5016;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    transform: translateY(3px);
+}
+
+.directions-btn:active {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    transform: translateY(4px);
 }
 
 /* Lists */
